@@ -35,14 +35,4 @@ node {
     stage "9. create folder and  file and put some data"
     sh "mkdir -p testing-cicd"
     writeFile file:"testing-cicd/sample.txt", text: "this is pipeline class"
-
-    stage "10. create docker images"
-    sh "docker pull ubuntu"
-    sh "docker pull amazonlinux"
-    sh "docker pull fedora"
-    sh "docker images"
-    sh "docker pull centos"
-    sh "sudo usermod -a -G docker jenkins"
-    sh "sudo systemctl status jenkins"
-    sh "sudo systemctl enable jenkins"
 } 
